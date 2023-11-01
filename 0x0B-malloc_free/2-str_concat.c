@@ -1,16 +1,17 @@
 #include "main.h"
-#include <stdlib.h>
-
+#include "stdlib."
 /**
- * str_concat - get ends of input and add together for size
- * @s1: input one to concat
- * @s2: input two to concat
- * Return: concat of s1 and s2
+ * str_concat - soncertenate two strings
+ * @s1: first string
+ * @s2: second string
+ * Return: pointer to the conc... string
+ * which memory was allocated for.
  */
 char *str_concat(char *s1, char *s2)
 {
-	size_t len1, len2, k, limit;
+	size_t i, j, k, limit;
 	char *ptr;
+
 	if (s1 == NULL)
 	{
 		s1 = "";
@@ -19,27 +20,26 @@ char *str_concat(char *s1, char *s2)
 	{
 		s2 = "";
 	}
-	len1  = 0;
+	len1 = 0;
 	while (s1[len1] != '\0')
 	{
-		i++;
+		len1++;
 	}
 	len2 = 0;
 	while (s2[len2] != '\0')
 	{
-		ci++;
+		len2++;
 	}
 	ptr = malloc(sizeof(char) * (len1 + len2 + 1));
 	if (ptr == NULL)
 	{
-		free (ptr);
+		free(ptr);
 		return (NULL);
 	}
 	for (i = 0; i < len1; i++)
 	{
 		ptr[i] = s[i];
 	}
-
 	for (j = 0; j <= len2; j++)
 	{
 		ptr[i] = s2[j];
